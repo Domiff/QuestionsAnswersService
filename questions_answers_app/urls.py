@@ -19,6 +19,6 @@ urlpatterns = [
     path("questions/<int:id>", GetOneQuestion.as_view(), name="question"),
     path("questions/delete/<int:id>", DeleteQuestion.as_view(), name="delete_question"),
     path("questions/<int:id>/answers", CreateAnswer.as_view(), name="create_answer"),
-    path("answers/<int:id>", GetAnswer.as_view(), name="get_answers"),
+    path("answers/<int:id>", GetAnswer.as_view(), name="get_answer"),
     path("answers/delete/<int:id>", DeleteAnswer.as_view(), name="delete_answers"),
 ]
