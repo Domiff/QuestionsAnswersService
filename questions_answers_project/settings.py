@@ -155,25 +155,20 @@ LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
     "formatters": {
-        "verbose": {
-            "format": "%(asctime)s - %(levelname)s - %(name)s - %(message)s"
-        }
+        "verbose": {"format": "%(asctime)s - %(levelname)s - %(name)s - %(message)s"}
     },
     "handlers": {
-        "console": {
-            "class": "logging.StreamHandler",
-            "formatter": "verbose"
-        },
+        "console": {"class": "logging.StreamHandler", "formatter": "verbose"},
         "logfile": {
             "class": "logging.handlers.RotatingFileHandler",
             "filename": LOGFILE_NAME,
             "maxBytes": LOG_SIZE,
             "backupCount": LOG_COUNT,
-            "formatter": "verbose"
-        }
+            "formatter": "verbose",
+        },
     },
     "root": {
         "handlers": ["console", "logfile"],
         "level": "INFO",
-    }
+    },
 }

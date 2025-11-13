@@ -11,4 +11,4 @@ def test_question(question_factory):
 def test_answer(answer_factory):
     answer = answer_factory()
     assert isinstance(answer.text, str)
-    assert isinstance(answer.user_id , str)
+    assert isinstance(answer.user_id, str)

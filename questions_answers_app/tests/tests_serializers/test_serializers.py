@@ -1,6 +1,10 @@
 import pytest
 
-from questions_answers_app.serializers import QuestionSerializer, AnswerSerializer, QuestionSerializerWithAnswer
+from questions_answers_app.serializers import (
+    QuestionSerializer,
+    AnswerSerializer,
+    QuestionSerializerWithAnswer,
+)
 
 
 @pytest.mark.django_db
@@ -34,5 +38,5 @@ def test_answer_serializer(question_factory, answer_factory):
     data = serializer.data
     assert data["id"] == answer.id
     assert data["question_id"] == question.id
-    assert  isinstance(data["user_id"], str)
-    assert  isinstance(data["text"], str)
+    assert isinstance(data["user_id"], str)
+    assert isinstance(data["text"], str)

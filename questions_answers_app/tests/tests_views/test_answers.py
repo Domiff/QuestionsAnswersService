@@ -6,12 +6,7 @@ from rest_framework.status import HTTP_201_CREATED, HTTP_200_OK, HTTP_204_NO_CON
 @pytest.mark.django_db
 def test_create_answer(api_client, question_factory):
     question = question_factory()
-    data = {
-        "text": "ggbtf",
-        "user_id": "testuser",
-        "question_id": question.id
-
-    }
+    data = {"text": "ggbtf", "user_id": "testuser", "question_id": question.id}
     url = reverse("questions_answers_app:create_answer", args=[question.id])
     response = api_client.post(url, data=data)
 
