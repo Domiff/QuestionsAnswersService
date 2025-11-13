@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 
-from core import settings
+from .config import settings
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
