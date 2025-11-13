@@ -25,7 +25,7 @@ pydantic==2.12.4
 pydantic-settings==2.12.0
 pydantic_core==2.41.5
 Pygments==2.19.2
-pytest==9.0.1
+pytest==7.4.4
 pytest-assert-utils==0.3.1
 pytest-common-subject==1.1.2
 pytest-cov==7.0.0
