@@ -144,3 +144,36 @@ SPECTACULAR_SETTINGS = {
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
 }
+
+# LOGGING
+
+LOGFILE_NAME = BASE_DIR / "logs" / "log.txt"
+LOG_SIZE = 4000
+LOG_COUNT = 4
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "verbose": {
+            "format": "%(asctime)s - %(levelname)s - %(name)s - %(message)s"
+        }
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "verbose"
+        },
+        "logfile": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "filename": LOGFILE_NAME,
+            "maxBytes": LOG_SIZE,
+            "backupCount": LOG_COUNT,
+            "formatter": "verbose"
+        }
+    },
+    "root": {
+        "handlers": ["console", "logfile"],
+        "level": "INFO",
+    }
+}
