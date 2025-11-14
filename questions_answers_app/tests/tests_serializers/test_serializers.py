@@ -19,10 +19,8 @@ def test_question_serializer(question_factory):
 @pytest.mark.django_db
 def test_question_with_answer_serializer(question_factory, answer_factory):
     question = question_factory(text="Как дела?")
-
     answer1 = answer_factory(question_id=question)
     answer2 = answer_factory(question_id=question)
-
     serializer = QuestionSerializerWithAnswer(question)
     data = serializer.data
     assert data["id"] == question.id
