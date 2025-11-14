@@ -16,3 +16,16 @@ permission denied
 ```bash
 sudo docker-compose up
 ```
+
+Если версия Docker 20.10+, то docker-compose входит в основной CLI Docker, 
+тогда можно использовать команду: 
+
+```bash
+docker compose up
+```
+
+или если нет прав доступа:
+
+```bash
+sudo docker compose up
+```
