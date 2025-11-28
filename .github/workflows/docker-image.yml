@@ -25,10 +25,14 @@ jobs:
           --health-retries=5
 
     env:
-      DATABASE_URL: postgres://test_user:test_pass@localhost:5432/test_db
-      DJANGO_SETTINGS_MODULE: questions_answers_project.settings
-      PYTHONUNBUFFERED: 1
-      GITHUB_ACTIONS: true
+      DJANGO_DEBUG: false
+      DJANGO_SECRET_KEY: "testsecretkey123"
+    
+      DB_NAME: test_db
+      DB_USER: test_user
+      DB_PASSWORD: test_pass
+      DB_HOST: localhost
+      DB_PORT: 5432
 
     steps:
       - name: Checkout repo
